@@ -49,12 +49,12 @@ create or replace procedure PROC_NAME (
 -- Local variables
 --------------------------------------------------------------------------------
 --
-    v_classname         varchar2(30)     := ''; --class name of program object
-    
-    v_sqlcode     number        := 0;     -- SQL error code buffer.
-    v_sqlmsg      varchar2(255) := null;  -- Error message buffer.
-    v_errmsg      varchar2(255) := null;  -- Error message buffer.
-    v_errstack    varchar2(4000):= null;  -- Error backtrace stack.
+  v_classname                     varchar2(30)     := ''; --class name of program object
+  
+  v_sqlcode                       number        := 0;     -- SQL error code buffer.
+  v_sqlmsg                        varchar2(255) := null;  -- Error message buffer.
+  v_errmsg                        varchar2(255) := null;  -- Error message buffer.
+  v_errstack                      varchar2(4000):= null;  -- Error backtrace stack.
 
 
 --
@@ -72,13 +72,13 @@ create or replace procedure PROC_NAME (
 begin
 
 --
---Initialize variables and perform admin type tasks
+-- Initialize variables and perform admin type tasks
 --
 
 
 
   --
-  --Begin work
+  -- Begin work
   --
   begin
   
@@ -121,8 +121,5 @@ exception
     v_errstack:= v_errstack || ' - ' || v_sqlmsg;
   
     dbms_output.put_line(v_classname,v_sqlcode,'Fail message', v_errstack );
-
-
-          
 
 end;
