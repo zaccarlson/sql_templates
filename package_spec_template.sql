@@ -39,4 +39,4 @@ create or replace package PACKAGE_NAME is
     p_input_2 in number,
     p_result out number)
 
-end ERS_CANCER_REGISTRY_PLMAP;
+end PACKAGE_NAME;
